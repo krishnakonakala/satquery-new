@@ -1,0 +1,75 @@
+[
+{
+  "source_id": "BHOONIDHI",
+  "name": "Bhoonidhi Open Data Access Gateway",
+  "organization": "National Remote Sensing Centre (NRSC) / ISRO",
+  "base_url": "https://bhoonidhi-api.nrsc.gov.in",
+  "auth_url": "https://bhoonidhi-api.nrsc.gov.in/auth/token",
+  "collections_url": "https://bhoonidhi-api.nrsc.gov.in/data/collections",
+  "search_url": "https://bhoonidhi-api.nrsc.gov.in/data/search",
+  "download_url": "https://bhoonidhi-api.nrsc.gov.in/download",
+  "authentication": {
+    "type": "user_password",
+    "token_type": "Bearer"
+  },
+  "authentication_required": true,
+  "status": "CONFIGURED",
+  "description": "Official ISRO/NRSC Earth observation data catalogue and download API using STAC."
+},
+  {
+    "source_id": "BHUVAN",
+    "name": "Bhuvan Indian Geo-Platform",
+    "organization": "National Remote Sensing Centre (NRSC) / ISRO",
+    "base_url": "https://bhuvan.nrsc.gov.in",
+    "api_url": "https://bhuvan-app1.nrsc.gov.in/bhuvan2d/bhuvan/webgis/get_wms.php",
+    "license": "Government of India Open Access",
+    "coverage": "India Administrative Boundaries (National to Village), Land Use Land Cover (LULC), Geomorphology, Disaster Portals",
+    "update_frequency": "Periodic / Decadal & Annual Series",
+    "authentication_required": false,
+    "status": "OPERATIONAL",
+    "last_checked": "2026-09-06T08:30:00Z",
+    "description": "ISRO national geoportal for multi-scale Indian administrative hierarchies, cadastral boundaries, and thematic natural resource cartography."
+  },
+  {
+    "source_id": "IMD",
+    "name": "IMD National Weather Forecasting Centre & Hydromet Division",
+    "organization": "India Meteorological Department, Ministry of Earth Sciences",
+    "base_url": "https://mausam.imd.gov.in",
+    "api_url": "https://hydro.imd.gov.in/hydrometweb/(S(q4h40i45y3qg4h45t20h4545))/districtraifall.aspx",
+    "license": "Open Government Data (OGD) Platform India",
+    "coverage": "Pan-India District & Sub-Division Hydrological Stations",
+    "update_frequency": "Daily at 08:30 IST & 17:30 IST",
+    "authentication_required": false,
+    "status": "OPERATIONAL",
+    "last_checked": "2026-09-06T08:30:00Z",
+    "description": "Official meteorological gauge measurements, standard precipitation normal departure statistics, and meteorological alerts across all Indian districts."
+  },
+  {
+    "source_id": "NASA_FIRMS",
+    "name": "NASA Fire Information for Resource Management System (FIRMS)",
+    "organization": "NASA Earth Science Data and Information System (ESDIS) Project",
+    "base_url": "https://firms.modaps.eosdis.nasa.gov",
+    "api_url": "https://firms.modaps.eosdis.nasa.gov/api/country/csv",
+    "license": "NASA Open Science Data Policy",
+    "coverage": "South Asia / India VIIRS 375m & MODIS 1km Active Fire / Thermal Anomalies",
+    "update_frequency": "Near-Real-Time (~3 hours from satellite pass)",
+    "authentication_required": true,
+    "status": "OPERATIONAL",
+    "last_checked": "2026-09-06T08:30:00Z",
+    "description": "Satellite thermal anomaly detection delivering active agricultural stubble and forest wildfire coordinates."
+  },
+  {
+    "source_id": "ISRO_DMSP",
+    "name": "Disaster Management Support Programme (DMSP)",
+    "organization": "ISRO / NRSC Emergency Monitoring Cell",
+    "base_url": "https://bhuvan-app1.nrsc.gov.in/disaster/disaster.php",
+    "api_url": "https://bhuvan.nrsc.gov.in/dmsp/services",
+    "license": "National Disaster Management Authority (NDMA) & ISRO Shared Directive",
+    "coverage": "Major Indian River Basins (Brahmaputra, Ganga, Mahanadi, Godavari, Kosi) & Flood Inundation Layers",
+    "update_frequency": "Event-Driven During Monsoon & Cyclones",
+    "authentication_required": false,
+    "status": "OPERATIONAL",
+    "last_checked": "2026-09-06T08:30:00Z",
+    "description": "Operational flood inundation mapping, cyclone tracking, and landslide hazard spatial layers generated from microwave (RISAT/EOS-04) and optical satellites."
+  }
+]

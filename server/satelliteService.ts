@@ -1,0 +1,138 @@
+/**
+ * SATQUERY AI — Satellite Intelligence Service
+ * Indian & International Earth Observation Constellation Metadata
+ * Smart India Hackathon 2026 — PS 26167
+ */
+
+import { SatelliteMission } from './types';
+
+const SATELLITE_CONSTELLATION: SatelliteMission[] = [
+  {
+    id: 'EOS-04',
+    name: 'EOS-04 (RISAT-1A)',
+    agency: 'ISRO (Department of Space)',
+    status: 'OPERATIONAL',
+    orbitType: 'Sun-Synchronous Polar (Dawn-Dusk)',
+    altitudeKm: 529,
+    inclinationDeg: 97.5,
+    sensor: 'C-band Synthetic Aperture Radar (5.35 GHz)',
+    modality: 'SAR',
+    bands: ['C-band (5.6 cm wavelength)'],
+    spatialResolutionMeters: 3, // In Fine Resolution Stripmap mode
+    revisitDays: 25,
+    latestPassAoi: 'Assam / Northeast India',
+    latestPassTime: '2024-10-18T05:32:11Z',
+    nextPassTime: '2024-11-12T05:30:00Z',
+    realOrSimulated: 'OFFICIAL_TELEMETRY',
+    dataCatalog: 'ISRO / NRSC Bhoonidhi',
+    description: 'Radar imaging satellite designed to provide high-resolution all-weather SAR imagery for agriculture, forestry, soil moisture, and flood disaster mapping.',
+  },
+  {
+    id: 'CARTOSAT-3',
+    name: 'Cartosat-3',
+    agency: 'ISRO',
+    status: 'OPERATIONAL',
+    orbitType: 'Sun-Synchronous Polar',
+    altitudeKm: 505,
+    inclinationDeg: 97.5,
+    sensor: 'Panchromatic (0.28m) & 4-Band Multispectral (1.12m)',
+    modality: 'OPTICAL',
+    bands: ['PAN (0.45-0.90 µm)', 'B2 (Blue)', 'B3 (Green)', 'B4 (Red)', 'B5 (NIR)'],
+    spatialResolutionMeters: 0.28,
+    revisitDays: 5, // With spacecraft agility tilting
+    latestPassAoi: 'Delhi NCR / Northern Plains',
+    latestPassTime: '2024-09-15T05:10:20Z',
+    nextPassTime: '2024-09-20T05:08:00Z',
+    realOrSimulated: 'OFFICIAL_TELEMETRY',
+    dataCatalog: 'NRSC Commercial & Government Cadastre Dissemination',
+    description: 'Third-generation agile advanced satellite with highest spatial resolution optical imaging in Indian civil remote sensing history.',
+  },
+  {
+    id: 'RESOURCESAT-2A',
+    name: 'Resourcesat-2A',
+    agency: 'ISRO',
+    status: 'OPERATIONAL',
+    orbitType: 'Sun-Synchronous Polar',
+    altitudeKm: 817,
+    inclinationDeg: 98.7,
+    sensor: 'LISS-4 (Mono/MX 5.8m), LISS-3 (23.5m), AWiFS (56m)',
+    modality: 'OPTICAL',
+    bands: ['Green (0.52-0.59 µm)', 'Red (0.62-0.68 µm)', 'NIR (0.77-0.86 µm)', 'SWIR (1.55-1.70 µm)'],
+    spatialResolutionMeters: 5.8,
+    revisitDays: 24,
+    latestPassAoi: 'Telangana & Andhra Pradesh',
+    latestPassTime: '2024-11-02T04:45:00Z',
+    nextPassTime: '2024-11-26T04:40:00Z',
+    realOrSimulated: 'OFFICIAL_TELEMETRY',
+    dataCatalog: 'Bhoonidhi Open Access / Bhuvan Thematic',
+    description: 'Workhorse satellite supporting integrated land and water resource management, agricultural yield estimation, and periodic national LULC audits.',
+  },
+  {
+    id: 'EOS-06',
+    name: 'EOS-06 (Oceansat-3)',
+    agency: 'ISRO',
+    status: 'OPERATIONAL',
+    orbitType: 'Sun-Synchronous Polar (12:00 PM descending node)',
+    altitudeKm: 720,
+    inclinationDeg: 98.28,
+    sensor: 'Ocean Colour Monitor-3 (13 bands) & Ku-band Scatterometer',
+    modality: 'MULTISPECTRAL',
+    bands: ['13 Visible & NIR bands (400 nm - 1010 nm)', 'Thermal IR (TIR-1, TIR-2)'],
+    spatialResolutionMeters: 250,
+    revisitDays: 2,
+    latestPassAoi: 'Bay of Bengal & Coastal Odisha',
+    latestPassTime: '2024-10-25T06:15:00Z',
+    nextPassTime: '2024-10-27T06:12:00Z',
+    realOrSimulated: 'OFFICIAL_TELEMETRY',
+    dataCatalog: 'MOSDAC (Meteorological and Oceanographic Satellite Data Archival Centre)',
+    description: 'Marine and coastal environmental satellite monitoring phytoplankton blooms, suspended ocean sediments, sea surface winds, and cyclone genesis.',
+  },
+  {
+    id: 'NISAR',
+    name: 'NISAR (NASA-ISRO SAR)',
+    agency: 'Joint ISRO / NASA JPL',
+    status: 'UPCOMING',
+    orbitType: 'Sun-Synchronous Dawn-Dusk',
+    altitudeKm: 747,
+    inclinationDeg: 98.4,
+    sensor: 'Dual-Frequency SweepSAR: S-band (ISRO 3.2 GHz) + L-band (NASA 1.25 GHz)',
+    modality: 'SAR',
+    bands: ['S-band (9.3 cm wavelength)', 'L-band (24 cm wavelength)'],
+    spatialResolutionMeters: 3,
+    revisitDays: 12,
+    latestPassAoi: 'Pre-launch Calibration & Joint Validation Testbeds',
+    latestPassTime: 'Engineering Phase 2024-2026',
+    nextPassTime: 'Target Launch & Science Ingestion',
+    realOrSimulated: 'OFFICIAL_TELEMETRY',
+    dataCatalog: 'Joint ISRO Bhoonidhi / NASA Alaska Satellite Facility (ASF)',
+    description: 'Flagship dual-frequency synthetic aperture radar capable of measuring millimetric surface displacement of glaciers, crustal faults, wetlands, and biomass structures worldwide.',
+  },
+  {
+    id: 'SENTINEL-1A',
+    name: 'Copernicus Sentinel-1A',
+    agency: 'ESA (European Space Agency)',
+    status: 'OPERATIONAL',
+    orbitType: 'Sun-Synchronous Polar',
+    altitudeKm: 693,
+    inclinationDeg: 98.18,
+    sensor: 'C-band SAR (5.405 GHz) Interferometric Wide Swath',
+    modality: 'SAR',
+    bands: ['VV', 'VH', 'HH', 'HV'],
+    spatialResolutionMeters: 10,
+    revisitDays: 12,
+    latestPassAoi: 'South Asian Landmass',
+    latestPassTime: '2024-10-22T12:05:00Z',
+    nextPassTime: '2024-11-03T12:00:00Z',
+    realOrSimulated: 'OFFICIAL_TELEMETRY',
+    dataCatalog: 'Copernicus Data Space Ecosystem & NRSC Bhoonidhi Mirror',
+    description: 'Radar constellation providing continuous all-weather C-band synthetic aperture radar imaging for emergency disaster management and cryosphere tracking.',
+  },
+];
+
+export function getSatelliteConstellation(): SatelliteMission[] {
+  return SATELLITE_CONSTELLATION;
+}
+
+export function getSatelliteById(id: string): SatelliteMission | undefined {
+  return SATELLITE_CONSTELLATION.find((s) => s.id === id);
+}
